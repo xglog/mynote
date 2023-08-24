@@ -1,3 +1,20 @@
+/* vscode git 配置问题
+
+Linux终端
+sudo apt-get install update
+sudo apt-get install git
+
+git config --global user.name "your name"
+git config --global user.email "you email"
+
+创建一个公钥
+ssh-keygen -C "your email" -t rsa
+
+添加公钥到github上
+测试是否添加成功
+ssh -T git@github.com
+*/
+
 /*
 包
 每个 Go 程序都是由包构成的。
@@ -7,7 +24,7 @@
 *注意：此程序的运行环境是固定的，因此 rand.Intn 总是会返回相同的数字
 */
 
-package main
+package lessons_1
 
 import ( //此代码用圆括号组合了导入，这是“分组”形式的导入语句。
 	"fmt"
@@ -15,11 +32,14 @@ import ( //此代码用圆括号组合了导入，这是“分组”形式的导
 )
 
 // func add(x int, y int) int { 	//*注意类型在变量名 之后。
-func add(x, y int) int { //当连续两个或多个函数的已命名形参类型相同时，可以简写
-	return x + y
+func Add(x, y int) int { //当连续两个或多个函数的已命名形参类型相同时，可以简写
+
+	sum := x + y
+	fmt.Println("the sum is :", sum)
+	return sum
 }
 
-func main1() {
-	fmt.Println("My favorite number is", rand.Intn(10)) //在 Go 中，如果一个名字以大写字母开头，那么它就是已导出的。(类似java的private public)
-	fmt.Println("执行函数add", add(3, 5))
+func MyFavoriteNumber() {
+
+	fmt.Println("My favorite number is", rand.Intn(10))
 }
