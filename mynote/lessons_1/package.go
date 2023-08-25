@@ -1,18 +1,34 @@
 /* vscode git 配置问题
 
-Linux终端
+# Linux终端
 sudo apt-get install update
 sudo apt-get install git
+git --version
 
 git config --global user.name "your name"
 git config --global user.email "you email"
 
-创建一个公钥,取名字位git.hub,默认生成在~/.ssh目录下面
+# 找到项目文件夹进入，进行初始化git
+git init
+
+# 添加远程仓库（这里使用ssh）
+git remote add origin git@github.com:xglog/mynote.git
+# 查看远程仓库名称
+git remote
+# origin
+
+# 创建一个公钥,取名字位git.hub,默认生成在~/.ssh目录下面
 ssh-keygen -C "your email" -t rsa
 
-添加公钥到github上
-测试是否添加成功
+# 添加公钥到github上
+
+# 测试是否添加成功
 ssh -T git@github.com
+# Hi xglog! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+#将本地仓库推送到远程仓库
+git push -u origin main
 */
 
 /*
