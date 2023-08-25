@@ -7,8 +7,8 @@ sudo apt-get install git
 git config --global user.name "your name"
 git config --global user.email "you email"
 
-创建一个公钥
-ssh-keygen -C "your email" -t rsa
+创建一个公钥,取名字位git.hub,默认生成在~/.ssh目录下面
+ssh-keygen -C "your email" -t git.hub
 
 添加公钥到github上
 测试是否添加成功
