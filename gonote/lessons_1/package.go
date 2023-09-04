@@ -40,7 +40,7 @@ git push -u origin main
 *注意：此程序的运行环境是固定的，因此 rand.Intn 总是会返回相同的数字
 */
 
-package lessons_1
+package main
 
 import ( //此代码用圆括号组合了导入，这是“分组”形式的导入语句。
 	"fmt"
@@ -58,4 +58,8 @@ func Add(x, y int) int { //当连续两个或多个函数的已命名形参类�
 func MyFavoriteNumber() {
 
 	fmt.Println("My favorite number is", rand.Intn(10))
+}
+
+func main() {
+	Add(3,4)
 }
