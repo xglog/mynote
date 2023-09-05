@@ -10,6 +10,7 @@ func NetHttpDemo() {
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/hello",helloHandler)
 	log.Fatal(http.ListenAndServe(":9999",nil))
+
 }
 
 func indexHandler(w http.ResponseWriter, req *http.Request) {
