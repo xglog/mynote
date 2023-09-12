@@ -14,16 +14,15 @@ func return_after() int {
 	return 0
 }
 
-
 func defer_call() int {
 	fmt.Println("1")
 	defer fmt.Println("我是1里面的defer,看看我和1里面的return谁先执行")
 	return return_after()
 }
-func defer_call_2()  {
+func defer_call_2() {
 	fmt.Println("2")
 }
-func defer_call_3()  {
+func defer_call_3() {
 	fmt.Println("3")
 }
 
@@ -32,8 +31,8 @@ func defer_call_3()  {
 |				 | <-- 栈	 call defer_call3()
 |                |
 | defer_call2()	 |
-| defer_call()	 |	
-|________________|_	
+| defer_call()	 |
+|________________|_
 */
 func main() {
 	fmt.Println("我是一个方法")
@@ -41,4 +40,3 @@ func main() {
 	defer defer_call_2()
 	defer defer_call_3()
 }
-

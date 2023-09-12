@@ -8,14 +8,14 @@ import (
 
 func NetHttpDemo() {
 	http.HandleFunc("/", indexHandler)
-	http.HandleFunc("/hello",helloHandler)
-	log.Fatal(http.ListenAndServe(":9999",nil))
+	http.HandleFunc("/hello", helloHandler)
+	log.Fatal(http.ListenAndServe(":9999", nil))
 
 }
 
 func indexHandler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "URL.Path=%q\n", req.URL.Path)
-	fmt.Fprintf(w,"hello,word\n")
+	fmt.Fprintf(w, "hello,word\n")
 }
 
 func helloHandler(w http.ResponseWriter, req *http.Request) {
@@ -25,4 +25,3 @@ func helloHandler(w http.ResponseWriter, req *http.Request) {
 	}
 
 }
-
